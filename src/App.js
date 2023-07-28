@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import {Canvas} from '@react-three/fiber'
 import './App.css';
-
+import Box from './Box';
+import Capsule from './Capsule';
+import Cone from './Cone';
+import Ring from './Dodecone';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{height:'100vh'}}>
+<Canvas
+  camera={{ position: [2, 0, 12.25], fov: 15 }}
+  className ='canvasMain'
+>
+<ambientLight />
+    <pointLight position={[10, 10, 10]} />
+    <Box position={[-2, 1.4, 0]}  />
+  <Capsule position = {[-1.4,1.3,0]} />
+  <Cone position = {[-0.6,1.3,0]}/>
+  <Ring position = {[-0.6,1.3,0]}/>
+</Canvas>
     </div>
   );
 }
