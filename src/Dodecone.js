@@ -11,8 +11,8 @@ return (
     <mesh {...props}
     ref={capmesh}>
         <ambientLight/>
-        <ringGeometry args={[ 1, 2,10]}/>
-        <meshStandardMaterial color='red'/>
+        <ringGeometry args={[ 1, 0.4,10]}/>
+        <meshStandardMaterial color='aliceblue' side='double'/>
     </mesh>
 )
 }
