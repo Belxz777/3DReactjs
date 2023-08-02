@@ -6,7 +6,7 @@ export default function Box(props){
     const meshRef = useRef()//ссылка на обьект крч мы получем его полностью 
     //и теперь мы вращем его
     useFrame((state,delta )=>{meshRef.current.rotation.x+=delta
-    meshRef.current.rotation.y+=delta})
+    meshRef.current.rotation.y+=delta+0.1})
     useEffect(()=>{
         console.log(meshRef)
     })
@@ -19,8 +19,8 @@ export default function Box(props){
         onClick={(event) => setActive(!active)}
         onPointerOver={(event) => setHover(true)}
         onPointerOut={(event) => setHover(false)}>
-        <boxGeometry args={[0.1, 0.1, 0.1]} />
-        <meshStandardMaterial color={hovered ? 'aliceblue' : 'black'} />
+        <boxGeometry args={[1, 1, 1]} />
+        <meshStandardMaterial color={hovered ? 'darkorchid' : 'black'} />
         </mesh>
         
     )

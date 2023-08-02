@@ -1,0 +1,9 @@
+.links{
+    color:darkorchid;
+    text-decoration: none;
+    text-align: center;
+}
+.main{
+    display: inline-block;
+    left: 50%;
+}
